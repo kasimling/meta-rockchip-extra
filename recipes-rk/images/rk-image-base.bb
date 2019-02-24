@@ -31,3 +31,5 @@ CORE_IMAGE_EXTRA_INSTALL += " \
 	${@bb.utils.contains("DISTRO_FEATURES", "x11 wayland", "xserver-xorg-xwayland weston-xwayland", "", d)} \
 	${@bb.utils.contains("DISTRO_FEATURES", "wayland", "weston weston-init weston-examples weston-ini", "", d)} \
 "
+
+IMAGE_FEATURES_append = " ssh-server-dropbear"
